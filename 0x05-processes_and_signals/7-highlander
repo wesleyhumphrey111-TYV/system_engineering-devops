@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-# Kills the 7-highlander process using PID (strict version)
+# Prints a message indefinitely and handles SIGTERM
 
-pid=$(ps aux | grep -v grep | grep 7-highlander | awk '{print $2}')
+trap 'echo "I am invincible!!!"' SIGTERM
 
-kill "$pid"
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+done
