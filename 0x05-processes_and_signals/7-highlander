@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Prints a message forever and handles SIGTERM
+# Prints a message indefinitely and handles SIGTERM
 
 trap 'echo "I am invincible!!!"' SIGTERM
 
